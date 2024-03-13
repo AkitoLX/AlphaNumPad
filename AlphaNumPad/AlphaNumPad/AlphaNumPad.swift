@@ -134,24 +134,23 @@ class AlphaNumPad: UIView{
     func creatBackSpaceButton(frame: CGRect, action: Selector) -> UIButton{
         let button = KeyBoardButton.init(frame: frame)
         button.addTarget(self, action: action, for: .touchUpInside)
-        button.backgroundColor = .white
+        button.backgroundColor = .systemBackground
         button.layer.cornerRadius = 8
         button.setImage(UIImage(systemName: "delete.left"), for: .normal)
         button.setImage(UIImage(systemName: "delete.left.fill"), for: .selected)
         button.setImage(UIImage(systemName: "delete.left.fill"), for: .highlighted)
-        button.tintColor = .black
+        button.tintColor = .label
         return button
     }
     
-    func creatButton(title: String, backgroundImage: UIImage? = nil, frame: CGRect, touchUpAction: Selector) -> UIButton {
+    func creatButton(title: String, frame: CGRect, touchUpAction: Selector) -> UIButton {
         let button = KeyBoardButton.init(frame: frame)
         button.setTitle(title, for: .normal)
         button.addTarget(self, action: touchUpAction, for: .touchUpInside)
-        button.backgroundColor = .white
+        button.backgroundColor = .systemBackground
         button.layer.cornerRadius = 8
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        button.setBackgroundImage(backgroundImage, for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.label, for: .normal)
         
         return button
     }

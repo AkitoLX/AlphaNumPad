@@ -10,13 +10,13 @@ import UIKit
 class KeyBoardButton: UIButton{
     override var isHighlighted: Bool {
         didSet {
-            backgroundColor = isHighlighted || isSelected ? UIColor.lightGray : UIColor.white
+            backgroundColor = isHighlighted || isSelected ? UIColor.systemGray2 : UIColor.systemBackground
         }
     }
     
     override var isSelected: Bool{
         didSet{
-            backgroundColor = isSelected ? UIColor.lightGray : UIColor.white
+            backgroundColor = isSelected ? UIColor.systemGray2 : UIColor.systemBackground
         }
     }
 }
